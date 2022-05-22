@@ -6,6 +6,19 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/click" />
+      <excludeFolder url="file://$MODULE_DIR$/click-8.0.4.dist-info" />
+      <excludeFolder url="file://$MODULE_DIR$/flask" />
+      <excludeFolder url="file://$MODULE_DIR$/Flask-1.0.2.dist-info" />
+      <excludeFolder url="file://$MODULE_DIR$/itsdangerous" />
+      <excludeFolder url="file://$MODULE_DIR$/itsdangerous-2.0.1.dist-info" />
+      <excludeFolder url="file://$MODULE_DIR$/jinja2" />
+      <excludeFolder url="file://$MODULE_DIR$/Jinja2-3.0.3.dist-info" />
+      <excludeFolder url="file://$MODULE_DIR$/markupsafe" />
+      <excludeFolder url="file://$MODULE_DIR$/MarkupSafe-2.0.1.dist-info" />
+      <excludeFolder url="file://$MODULE_DIR$/werkzeug" />
+      <excludeFolder url="file://$MODULE_DIR$/Werkzeug-0.16.0.dist-info" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
