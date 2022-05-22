@@ -1,0 +1,31 @@
+app: fs233-pixiv-api
+stage: dev
+component: flask
+name: fs233-pixiv-api
+inputs:
+  src:
+    hook: pip3 install -r requirements.txt -t ./
+    dist: ./
+    exclude:
+      - .env
+      - __pycache__/**
+  region: ap-hongkong
+  functionConf:
+    name: ${name}
+    runtime: Python3.6
+    timeout: 5 # 超时时间，单位秒
+    memorySize: 128 # 内存大小，单位MB
+  apigatewayConf:
+    enableCORS: true #  允许跨域
+    customDomains: # 自定义域名绑定
+      - domain: i.fs233.cc # 待绑定的自定义的域名
+        certificateId: vtO9gUU5 # 待绑定自定义域名的证书唯一 ID
+        # 如要设置自定义路径映射，请设置为 false
+        isDefaultMapping: false
+        # 自定义路径映射的路径。使用自定义映射时，可一次仅映射一个 path 到一个环境，也可映射多个 path 到多个环境。并且一旦使用自定义映射，原本的默认映射规则不再生效，只有自定义映射路径生效。
+        pathMappingSet:
+          - path: /
+            environment: release
+        protocols: # 绑定自定义域名的协议类型，默认与服务的前端协议一致。
+          - http # 支持http协议
+          - https # 支持https协议

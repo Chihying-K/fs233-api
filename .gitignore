@@ -1,0 +1,16 @@
+/venv/
+requirements
+bin
+click*
+flask
+Flask-*
+itsdangerous
+itsdangerous-*
+jinja2
+Jinja2-*
+markupsafe
+Markupsafe-*
+werkzeug
+Werkzeug-*
+
+/uploads
