@@ -3,6 +3,8 @@ import os
 from File import file
 from flask import Flask, jsonify, request
 
+from data.service import getParameterHandling
+
 IS_SERVERLESS = bool(os.environ.get('SERVERLESS'))
 
 app = Flask(__name__)
@@ -19,6 +21,7 @@ def index():
 可传参数：
 type = json
 num = {返回的图片张数}
+pq =  1（原图）2（中等图） (picture quality图片质量)
 '''
 
 
@@ -27,23 +30,11 @@ def setu():
     # 获取Get请求参数
     p = request.args
 
-    # 如果参数type为json 则返回json格式
-    if p.get('type') == 'json':
-        num = p.get('num')
-        list = file("data/img.txt")
-
-        # 判断num是否为空
-        if num == None:
-            a = list[0]
-        else:
-            a = list[0:int(num)]
-
-        return jsonify({'msg': a})
-    # 如果不是json则直接跳转图片
+    # 首先判断是否需要返回原图
+    if p.get('pq') == '2':
+        return getParameterHandling(p.get('type'), p.get('num'), 'data/img-min.txt')
     else:
-        list = file("data/img.txt")
-        a = '<script>window.location="' + list[0] + '"</script>'
-        return a
+        return getParameterHandling(p.get('type'), p.get('num'), 'data/img.txt')
 
 
 # 涩图张数（非R18）
