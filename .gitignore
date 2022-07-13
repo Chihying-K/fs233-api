@@ -13,8 +13,6 @@ Markupsafe-*
 werkzeug
 Werkzeug-*
 
-.idea/*
-
 /uploads
 /.env
 /colorama/__init__.py

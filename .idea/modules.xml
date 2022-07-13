@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/fs233-TencentServerless.iml" filepath="$PROJECT_DIR$/.idea/fs233-TencentServerless.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fs233-api.iml" filepath="$PROJECT_DIR$/.idea/fs233-api.iml" />
     </modules>
   </component>
 </project>

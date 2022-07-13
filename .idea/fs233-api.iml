@@ -19,8 +19,9 @@
       <excludeFolder url="file://$MODULE_DIR$/MarkupSafe-2.0.1.dist-info" />
       <excludeFolder url="file://$MODULE_DIR$/werkzeug" />
       <excludeFolder url="file://$MODULE_DIR$/Werkzeug-0.16.0.dist-info" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (fs233-api)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
