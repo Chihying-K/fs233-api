@@ -1,11 +1,7 @@
-import os
-
-from File import file
 from flask import Flask, jsonify, request
 
+from File import file
 from data.service import getParameterHandling
-
-IS_SERVERLESS = bool(os.environ.get('SERVERLESS'))
 
 app = Flask(__name__)
 
@@ -51,6 +47,5 @@ def numr18():
     return jsonify({'num': len(list)})
 
 
-if IS_SERVERLESS != True:
-    # run app in debug mode on port 5000
-    app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=9000)

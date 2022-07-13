@@ -13,6 +13,8 @@ Markupsafe-*
 werkzeug
 Werkzeug-*
 
+.idea/*
+
 /uploads
 /.env
 /colorama/__init__.py
@@ -55,3 +57,4 @@ Werkzeug-*
 /colorama/win32.py
 /colorama/winterm.py
 /zipp.py
+
